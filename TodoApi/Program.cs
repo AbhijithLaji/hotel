@@ -15,11 +15,11 @@ app.MapGet("/rooms", async (TodoDb db) =>
 
 app.MapGet("/rooms/{id}", async (int id, TodoDb db) =>
     await db.Todos.FindAsync(id)
-        is Todo todo
+        is Room todo
             ? Results.Ok(todo)
             : Results.NotFound());
 
-app.MapPost("/rooms", async (Todo todo, TodoDb db) =>
+app.MapPost("/rooms", async (Room todo, TodoDb db) =>
 {
     db.Todos.Add(todo);
     await db.SaveChangesAsync();
@@ -27,7 +27,7 @@ app.MapPost("/rooms", async (Todo todo, TodoDb db) =>
     return Results.Created($"/rooms/{todo.Id}", todo);
 });
 
-app.MapPut("/rooms/{id}", async (int id, Todo inputTodo, TodoDb db) =>
+app.MapPut("/rooms/{id}", async (int id, Room inputTodo, TodoDb db) =>
 {
     var todo = await db.Todos.FindAsync(id);
 
@@ -46,11 +46,11 @@ app.MapPut("/rooms/{id}", async (int id, Todo inputTodo, TodoDb db) =>
 
 app.MapDelete("/rooms/{id}", async (int id, TodoDb db) =>
 {
-    if (await db.Todos.FindAsync(id) is Todo todo)
+    if (await db.Todos.FindAsync(id) is Room room)
     {
-        db.Todos.Remove(todo);
+        db.Todos.Remove(room);
         await db.SaveChangesAsync();
-        return Results.Ok(todo);
+        return Results.Ok(room);
     }
 
     return Results.NotFound();
@@ -58,7 +58,7 @@ app.MapDelete("/rooms/{id}", async (int id, TodoDb db) =>
 
 app.Run();
 
-class Todo
+class Room
 {
     public int Id { get; set; }
     public int Roomno { get; set; }
@@ -72,5 +72,5 @@ class TodoDb : DbContext
     public TodoDb(DbContextOptions<TodoDb> options)
         : base(options) { }
 
-    public DbSet<Todo> Todos => Set<Todo>();
+    public DbSet<Room> Todos => Set<Room>();
 }
