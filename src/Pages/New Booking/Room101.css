@@ -1,0 +1,25 @@
+.columns{
+    background-color: white;
+    border:1px black solid;
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    overflow: auto;
+
+}
+
+.headin{
+    display: flex;
+    justify-content: space-between;
+}
+.table_box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+.content_box{
+    height:50px;
+    border-bottom: 1px black solid;
+    border-right: 1px solid black;
+    
+}

@@ -1,0 +1,39 @@
+.headings{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.search{
+    width:150px;
+
+}
+.txt{
+    width: 150px;
+    height: 30px;
+}
+#options{
+    width:150px;
+    height:30px;
+
+}
+.columns1{
+    background-color: white;
+    border:1px black solid;
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    overflow: auto;
+
+}
+.table_box1{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    
+}
+.content_box1{
+    height:50px;
+    border-bottom: 1px black solid;
+    border-right: 1px solid black;
+    
+}

@@ -1,0 +1,83 @@
+.labels{
+    display:grid;
+    margin-top: 30px;
+    justify-items: start;
+}
+.box{
+    width:900px;
+    height: 1000px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nt{
+    margin: 0%;
+    width: 800px;
+    height: 50px;
+}
+.nl{
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.btn1{
+    background-color: rgb(249, 177, 89);
+    height: 50px;
+    width: 200px;
+    border: 0.5px black solid;
+    left: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    bottom: 10px;
+}
+.new_booking h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cont{
+    display: flex;
+    margin-top: 20px;
+    width:50%;
+    justify-content: space-around;
+    align-items: center;
+}
+.save{
+    background-color: orange;
+    color: #ffffff;
+    height: 40px;
+    width: 100px;
+    border: 1px rgb(255, 153, 0);
+    font-weight: bold;
+
+}
+.k .an{
+    background-color: #ffffff;
+    color: orange;
+}
+.back{
+    background-color: #ffffff;
+    border: none;
+    color: orange;
+    width: fit-content;
+    left: 25px;
+}
+.ch_in .an ,.ch_out .an,.cancel .an{
+    width:100px;
+    background-color: white;
+    color: orange;
+    border: rgba(255, 166, 0, 0.464) solid 1px;
+    border-radius: 3px;
+}
+.gt_options{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.back{
+    color:orange;
+}
